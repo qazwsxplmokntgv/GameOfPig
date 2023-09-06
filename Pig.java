@@ -20,7 +20,7 @@ public class Pig
         /*true*/	allowCustomNames    = true,
         /*true*/	sortBoardByPoints   = false,
         /*tbd*/  	finishTurnForWinner = false; //wip
-					//End of Settings
+			//End of Settings
     private int turnNum,score,roundScore;
     private String playerName;
     private boolean isRolling;
@@ -69,7 +69,7 @@ public class Pig
                 cpus.add(new Pig("CPU"));
             }
         }
-		//adds all players and bots to a single ArrayList
+	//adds all players and bots to a single ArrayList
         all.addAll(players);
         all.addAll(cpus);
 		
@@ -213,7 +213,7 @@ public class Pig
             System.out.println();
         }
     }
-	//checks if the conditions for a win have been met
+    //checks if the conditions for a win have been met
     public boolean checkWon(){
         if(score+roundScore>=winThreshold){
             return true;
@@ -251,7 +251,7 @@ public class Pig
         int space = maxLength-getPlayerName().length();
         return getPlayerName()+spacer(space)+" Score is: "+getPlayerScore();
     }
-	//generates a victory message 
+    //generates a victory message 
     public String winMessage(){
         int space = 9-(playerName.length()/2); //centers player name below trophy
         String trophy = 
@@ -274,7 +274,7 @@ public class Pig
             return "s";
         }
     }
-	//generates spacing string
+    //generates spacing string
     public String spacer(int space){
         String spacer = "";
         for(int i = 0;i<space;i++){
@@ -282,7 +282,7 @@ public class Pig
         }
         return spacer;
     }
-	//generates string denoting the beginning of a turn
+    //generates string denoting the beginning of a turn
     public String toString(){
         return "\nTurn "+turnNum+"\n"+playerName+"'s Current Score is: "+score+"\nThis round "+playerName+" has: "+roundScore;
     }
