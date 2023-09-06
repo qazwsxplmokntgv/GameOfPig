@@ -128,7 +128,7 @@ public class Pig
             }
         }
     }
-	//Player constructor
+    //Player constructor
     public Pig(String name){
         turnNum = 1;
         roundScore = 0;
@@ -136,7 +136,7 @@ public class Pig
         playerName = name;
         isRolling = true;
     }
-	//executes a roll
+    //executes a roll
     public void roll(){
         System.out.println();
         int diceRoll = (int)(dieSidesCount*Math.random() + 1);
@@ -151,14 +151,14 @@ public class Pig
             setIsRolling(false);
         }
     }
-	//executes a bank
+    //executes a bank
     public void bank(){
         System.out.println();
         score += roundScore;
         roundScore = 0;
         turnNum += 1;
     }
-	//simulates a player turn
+    //simulates a player turn
     public void runPlayerTurn(ArrayList<Pig> all){
         Scanner rb = new Scanner(System.in);
         System.out.println(toString());
@@ -187,7 +187,7 @@ public class Pig
             }
         }
     }
-	//simulates a bot turn
+    //simulates a bot turn
     public void runCpuTurn(){
         System.out.println(toString());
         setIsRolling(true);
@@ -238,7 +238,7 @@ public class Pig
     public String getPlayerName(){
         return playerName;
     }
-	//generates a report of player scores 
+    //generates a report of player scores 
     public String playerScoreReport(ArrayList<Pig> all){
         int maxLength = 0;
         for(Pig a : all){
